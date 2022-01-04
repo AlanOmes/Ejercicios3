@@ -73,8 +73,7 @@ def vocal(letra):
     letra = letra.lower()
     if letra in vocales:
         return True
-    else:
-        return False
+    return False
 
 '''
 
@@ -101,4 +100,47 @@ print (multip(lista))
 
 '''
 
-# 
+# Definir una funcion superposicion() que tome dos listas y devuelva True si tienen al menos 1 miembro en comun o devuelva False de lo contrario. Escribir la funcion usando el bucle for anidado.
+
+'''
+
+def listas_en_comun(lista1, lista2):
+    for i in lista2:
+        if i in lista1:
+            return True
+    return False
+
+l = ['1', '2', '3']
+l2 = ['3', '4', '5']
+
+if listas_en_comun(l, l2) == True:
+    print ('hola')
+
+'''
+
+# Definir una funcion generar_n_caracteres() que tome un entero n y devuelva el caracter multiplicado por n. Por ejemplo: generar_n_caracteres(5, "x") deberia devolver "xxxxx".
+
+'''
+
+def generar_n_caracteres(numero, caracter):
+    return numero * caracter
+
+print (generar_n_caracteres(5, 'a'))
+
+'''
+
+# Definir un histograma procedimiento() que tome una lista de numeros enteros e imprima un histograma en la pantalla. Ejemplo: procedimiento([4, 9, 7]) deberia imprimir lo siguiente:
+
+# ****
+# *********
+# *******
+
+
+
+def procedimiento(lista):
+    for i in lista:
+        print (i * '*')
+
+lista = [1, 2, 3]
+
+print (procedimiento(lista))

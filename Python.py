@@ -135,7 +135,7 @@ print (generar_n_caracteres(5, 'a'))
 # *********
 # *******
 
-
+'''
 
 def procedimiento(lista):
     for i in lista:
@@ -144,3 +144,58 @@ def procedimiento(lista):
 lista = [1, 2, 3]
 
 print (procedimiento(lista))
+
+'''
+
+# La funcion max() del ejercicio 1 y la funcion max_de_tres() del ejercicio 2, solo van a funcionar para 2 o 3 numeros. Supongamos que tenemos mas de 3 numeros o no sabemos cuantos numeros son. Escribir una funcion max_in_list() que tome una lista de numeros y devuelva el mas grande.
+
+'''
+
+def max_en_lista(lista):
+    maxx = -99999
+    for i in lista:
+        if i > maxx:
+            maxx = i
+    return maxx
+
+lista = [1, 4, 6, 7, 23, 64, 3, 8]
+
+print (max_en_lista(lista))
+
+'''
+
+# Escribir una funcion mas_larga() que tome una lista de palabras y devuelva la mas larga. 
+
+'''
+
+def mas_larga(lista_de_palabras):
+    palabra = ''
+    for i in lista_de_palabras:
+        if len(i) > len(palabra):
+            palabra = i
+    return palabra
+
+lista = ['hola', 'caca', 'pis', 'casamiento', 'coche']
+
+print (mas_larga(lista))
+
+'''
+
+# Escribir una funcion filtrar_palabras() que tome una lista de palabras y un entero n, y devuelva las palabras que tengan mas de n caracteres. 
+
+'''
+
+def filtrar_palabras(lista, n):
+    palabras = ''
+    for i in lista:
+        if len(i) > n:
+            palabras += f' {i}'
+    return palabras
+
+lista = ['hola', 'caca', 'pis', 'casamiento', 'coche']
+
+print (filtrar_palabras(lista, 3))
+
+'''
+
+# 

@@ -198,4 +198,64 @@ print (filtrar_palabras(lista, 3))
 
 '''
 
+# Escribir un programa que le diga al usuario que ingrese una cadena. El programa tiene que evaluar la cadena y decir cuantas letras mayusculas tiene. 
+
+'''
+
+def contador_mayusculas(texto):
+    mayusculas = 0
+    for i in texto:
+        if i == i.upper() and i != " ":
+            mayusculas += 1
+    return mayusculas
+
+texto = input('Escriba una cadena de texto: ')
+
+print (f'La cadena de texto tiene {contador_mayusculas(texto)} letras mayusculas.') 
+
+'''
+
+# Construir un pequeno programa que convierta numeros binarios en enteros. 
+
+'''
+
+def binario_a_entero(binario):
+    convertido = int(binario, 2)
+    return convertido
+
+print (binario_a_entero('1101'))
+
+'''
+
+# Escribir un pequeno programa donde:
+# - Se ingresa el anio en curso.
+# - Se ingresa el nombre y el anio de nacimiento de tres personas.
+# - Se calcula cuantos anios cumpliran durante el anio en curso.
+# - Se imprime en pantalla.
+
+'''
+
+def calcular_edad(anio_actual, anio_nacimiento):
+    return anio_actual - anio_nacimiento
+
+
+anio = int (input('Ingrese el anio en curso: '))
+
+n1 = input ('Ingrese el nombre del primer alumno: ')
+nacimiento_n1 = int(input ('Ingrese el anio de nacimiento del primer alumno: '))
+n2 = input ('Ingrese el nombre del segundo alumno: ')
+nacimiento_n2 = int(input ('Ingrese el anio de nacimiento del segundo alumno: '))
+n3 = input ('Ingrese el nombre del tercer alumno: ')
+nacimiento_n3 = int(input ('Ingrese el anio de nacimiento del tercer alumno: '))
+
+
+print (f'\n{n1} cumplira {calcular_edad(anio, nacimiento_n1)} anios este anio.')
+print (f'\n{n2} cumplira {calcular_edad(anio, nacimiento_n2)} anios este anio.')
+print (f'\n{n3} cumplira {calcular_edad(anio, nacimiento_n3)} anios este anio.')
+
+
+'''
+
 # 
+
+

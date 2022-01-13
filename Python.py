@@ -256,6 +256,57 @@ print (f'\n{n3} cumplira {calcular_edad(anio, nacimiento_n3)} anios este anio.')
 
 '''
 
-# 
+# Definir una tupla con 10 edades de personas.
+# Imprimir la cantidad de personas con edades superiores a 20.
+# Puedes variar el ejercicio para que sea el usuario quien ingrese las edades.
 
+'''
 
+def mayoresDe20(lista_edades):
+    mayores = []
+    for i in lista_edades:
+        if i > 20:
+            mayores.append(i)
+    return mayores
+
+edades = []
+
+for i in range(1, 11):
+    pregunta = int(input(f'Ingrese la edad de la persona numero {i}: '))
+    edades.append(pregunta) 
+
+cantidad = len(mayoresDe20(edades))
+
+print (f'{cantidad} personas son mayores de 20.')
+
+'''
+
+# Definir una lista con un conjunto de nombres, imprimir la cantidad de comienzan con la letra a.
+# Tambien se puede hacer elegir al usuario la letra a buscar. (Un poco mas emocionante)
+
+'''
+
+def primera_letra(nombres, letra):
+    contador = 0
+    for i in nombres:
+        if i[0] == letra or i[0] == letra.upper():
+            contador += 1
+    return contador
+
+nombres = ['Alan', 'Julieta', 'Roberto', 'Coky', 'Bolt', 'Juan', 'Carlos', 'Pene']
+
+l = input('Elija una letra y le dire cuantos nombres comienzan con dicha letra: ')
+
+c = primera_letra(nombres, l)
+
+if c == 1:
+    print (f'Solo un nombre comienza con la letra {l.upper()}')
+else:
+    print (f'{c} nombres comienzan con la letra {l.upper()}')
+
+'''
+
+# Crear una funcion contar_vocales(), que reciba una palabra y cuente cuantas letras "a" tiene, cuantas letras "e" tiene y asi hasta completar todas las vocales. Se puede hacer que el usuario sea quien elija la palabra.
+
+def contar_vocales(palabra):
+    

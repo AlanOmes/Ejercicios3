@@ -308,5 +308,31 @@ else:
 
 # Crear una funcion contar_vocales(), que reciba una palabra y cuente cuantas letras "a" tiene, cuantas letras "e" tiene y asi hasta completar todas las vocales. Se puede hacer que el usuario sea quien elija la palabra.
 
+'''
+
 def contar_vocales(palabra):
-    
+    total_vocales = {
+        'a' : 0,
+        'e' : 0,
+        'i' : 0,
+        'o' : 0,
+        'u' : 0,    
+    }
+    for i in total_vocales:
+        for letra in palabra:
+            if letra.lower() == i:
+                total_vocales[i] += 1
+    return total_vocales
+         
+palabra = input('\nEscriba una palabra: ')
+vocales = contar_vocales(palabra)
+
+print (f'\nCantidad de vocales en la palabra {palabra}: ')
+print('\r')
+
+
+for i in vocales:
+    print (f'{i} : {vocales[i]}')
+
+'''
+

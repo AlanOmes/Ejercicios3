@@ -60,3 +60,18 @@ while EmpezarNuevo == ("s") or EmpezarNuevo == ("si"):
     EmpezarNuevo = input('\nQuieres jugar de nuevo? (si o no): ')
 
 '''
+
+# Escribe un programa que te permita jugar a una version simplificada del juego Master Mind. El juego consistira en adivinar una cadena de numeros distintos. Al principio, el programa debe pedir la longitud de la cadena (de 2 a 9 cifras). Despues el programa debe ir pidiendo que intentes adivinar la cadena de numeros. En cada intento, el programa informara de cuantos numeros han sido acertados (el programa considerara que se ha acertado un numero si coincide el valor y la posicion).
+
+import random
+
+longitud = int(input('Elija la longitud de la cadena (de 2 a 9 cifras): '))
+
+numero = []
+
+for i in range(longitud):
+    i = random.randint(1, 9)
+    numero.append(i)
+
+
+    

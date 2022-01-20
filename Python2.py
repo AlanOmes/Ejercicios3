@@ -65,6 +65,7 @@ while EmpezarNuevo == ("s") or EmpezarNuevo == ("si"):
 
 import random
 
+
 longitud = int(input('Elija la longitud de la cadena (de 2 a 9 cifras): '))
 
 numero = []
@@ -73,5 +74,27 @@ for i in range(longitud):
     i = random.randint(1, 9)
     numero.append(i)
 
+aciertos = 0
+
+while aciertos != longitud:
+    aciertos = 0
+    intento = int(input('Intenta adivinar la cadena de numeros: '))
+    copia = intento
+    copia_longitud = longitud
+
+    while copia > 0:
+        copia_longitud -= 1
+        digito = copia % 10
+        if digito == numero[copia_longitud]:
+            aciertos += 1
+    if aciertos == 0:
+        print ('\nNo has adivinado ningun valor.')
+    elif aciertos == longitud:
+        print (f'\nCon {intento} has adivinado todos los valores. \r\nFelicidades.')
+    else:
+        print (f'\nCon {intento} has adivinado {aciertos} valores.')
+
 
     
+
+

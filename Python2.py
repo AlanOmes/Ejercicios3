@@ -68,11 +68,16 @@ import random
 
 longitud = int(input('Elija la longitud de la cadena (de 2 a 9 cifras): '))
 
+while longitud <= 1 or longitud >= 10:
+    longitud = int(input('Elija la longitud de la cadena (de 2 a 9 cifras): '))
+
 numero = []
 
 for i in range(longitud):
     i = random.randint(1, 9)
     numero.append(i)
+
+print (numero)
 
 aciertos = 0
 
@@ -87,6 +92,7 @@ while aciertos != longitud:
         digito = copia % 10
         if digito == numero[copia_longitud]:
             aciertos += 1
+        copia = copia // 10
     if aciertos == 0:
         print ('\nNo has adivinado ningun valor.')
     elif aciertos == longitud:

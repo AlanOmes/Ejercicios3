@@ -126,5 +126,5 @@ print (f'\r\n{palabras_que_riman(p, p2)}')
 
 '''
 
-# Has un programa que pida al usuario una cantidad de dolares, una tasa de interes y un numero de anios. Muestra por pantalla en cuanto se habra convertido el capital inicial transcurridos esos anios si cada anio se aplica la tasa de interes introducida. Recordar que un capital C dolares a un interes del x por cien durante n anios se convierte en C * (1 + x/100)elevado a n (anios). Probar el programa sabiendo que una cantidad de 10000 dolares al 4.5% de interes anual se convierte en 24117.14 dolares al cabo de 20 anios.
+
 

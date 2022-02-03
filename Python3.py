@@ -21,13 +21,7 @@ def color_random(lista):
     return random.choice(lista)
 
 def calculo_descuento(precio, descuento):
-    print(descuento)
-    print(precio)
-    mult = descuento * precio
-    print (mult)
-    div = mult / 100
-    r = precio - div
-    return r
+    return precio - (descuento * precio / 100)
 
 colores_descuento = {  
     'BOLA BLANCA' : 0,
@@ -37,17 +31,17 @@ colores_descuento = {
     'BOLA AMARILLA' : 50,
 }
 
+copia_colores_descuento = colores_descuento
+
 salir = 2
 
 while salir != 1:
     gasto = int (input('\r\nIntroduzca el precio total de la compra: '))
     if gasto >= 100:
         color = color_random(colores_en_lista(colores_descuento))
-        print (colores_en_lista(colores_descuento))
-        print (colores_descuento)
         precioFinal = calculo_descuento(gasto, colores_descuento[color]) 
         print('\r\nSU GASTO IGUALA O SUPERA LOS $100.00 Y POR LO TANTO PARTICIPA EN LA PROMOCION.\r\n')
-        print (tabla_color_descuento(colores_descuento))
+        print (tabla_color_descuento(copia_colores_descuento))
         print(f'\r\nALEATORIAMENTE USTED OBTUVO UNA {color}')
         
         if color == 'BOLA BLANCA':
